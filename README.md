@@ -1,2 +1,2 @@
-# KnossysMLProcessManager
-A drydock and library containing a process management framework for a server based distributed machine learning system
+# ThreadingTest
+A drydock to work out the threading model used for the Knossys task manager and its modules
