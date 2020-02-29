@@ -1,15 +1,16 @@
-package com.knossys.rnd.process;
+package com.knossys.rnd.process.modules;
 
 import java.util.concurrent.BlockingQueue;
 
 import org.apache.log4j.Logger;
 
 import com.knossys.rnd.data.KDataset;
+import com.knossys.rnd.process.KTestingTools;
 
 /**
  * @author vvelsen
  */
-class KModuleBase extends KTestingTools implements Runnable, KThreadInterface {
+public class KModuleBase extends KTestingTools implements Runnable, KThreadInterface {
 
 	protected BlockingQueue<KDataset> eventQueue = null;
 	protected int threadNo = -1;

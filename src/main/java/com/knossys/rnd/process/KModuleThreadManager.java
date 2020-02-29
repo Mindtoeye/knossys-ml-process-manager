@@ -14,7 +14,8 @@ import java.util.concurrent.*;
 import org.apache.log4j.Logger;
 
 import com.knossys.rnd.data.KDataset;
-import com.knossys.rnd.process.KThreadInterface;
+import com.knossys.rnd.process.modules.KModuleBase;
+import com.knossys.rnd.process.modules.KThreadInterface;
 
 /**
  * @author vvelsen
@@ -202,7 +203,7 @@ public class KModuleThreadManager extends KTestingTools implements Runnable, KTh
 				
 			  // Make sure we don't propagate to ourselves!
 			  if (dummy.getThreadNo()!=Integer.parseInt(originator)) {
-			  	debug ("Propagating to: " + dummy.threadNo);
+			  	debug ("Propagating to: " + dummy.getThreadNo());
 					dummy.consume(dup);
 				}
 			}

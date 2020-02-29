@@ -1,11 +1,11 @@
 /**
  * 
  */
-package com.knossys.rnd.kshiro;
+package com.knossys.rnd.process;
 
 import org.apache.log4j.Logger;
 
-import com.knossys.rnd.process.KModuleThreadManager;
+import com.knossys.rnd.process.modules.KModuleGremlin;
 import com.knossys.rnd.process.modules.KModuleTemplate;
 import com.knossys.rnd.process.modules.KModuleTimer;
 import com.knossys.rnd.process.modules.KmoduleConsole;
@@ -13,13 +13,13 @@ import com.knossys.rnd.process.modules.KmoduleConsole;
 /**
  * @author vvelsen
  */
-public class FauxTaskManager extends KModuleThreadManager  {
+public class FauxTaskManager2 extends KModuleThreadManager  {
 
 	/**
 	 * 
 	 */
-	public FauxTaskManager () {
-		setLogger(Logger.getLogger(FauxTaskManager.class));
+	public FauxTaskManager2 () {
+		setLogger(Logger.getLogger(FauxTaskManager2.class));
 	}	
 	
 	/**
@@ -33,21 +33,17 @@ public class FauxTaskManager extends KModuleThreadManager  {
 		addThread (new KModuleTimer());
 		addThread (new KModuleTimer());
 		addThread (new KmoduleConsole());
-		// This one will be rejected because it's marked as a singleton
-		addThread (new KmoduleConsole());
 		addThread (new KModuleTemplate ());
 		addThread (new KModuleTemplate ());
+		addThread (new KModuleGremlin ());
 	}
 		
 	/**
 	 * @param args
 	 */
-	/*
 	public static void main(String args[]) {
 
-		KThreadTestApp driver=new KThreadTestApp();
-						
+		FauxTaskManager2 driver=new FauxTaskManager2();
     driver.startDriver();
 	}
-	*/
 }

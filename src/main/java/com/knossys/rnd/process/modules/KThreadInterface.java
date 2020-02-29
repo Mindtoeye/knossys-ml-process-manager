@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.knossys.rnd.process;
+package com.knossys.rnd.process.modules;
 
 import java.util.concurrent.BlockingQueue;
 

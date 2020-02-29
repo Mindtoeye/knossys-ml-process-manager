@@ -1,4 +1,4 @@
-package com.knossys.rnd.process;
+package com.knossys.rnd.process.modules;
 
 import java.io.BufferedReader;
 import java.io.IOException;

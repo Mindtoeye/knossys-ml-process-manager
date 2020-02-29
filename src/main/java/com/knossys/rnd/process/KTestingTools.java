@@ -52,10 +52,20 @@ public class KTestingTools extends Base {
 		Base.debugStatic("taskIndicateDisplayObject (" + anId + ", " + aData + ")");
 	}
 
+	/**
+	 * @param anId
+	 * @param aData
+	 * @param aMessage
+	 */
 	protected void taskIndicateErrorException(String anId, String aData, String aMessage) {
 		Base.debugStatic("taskIndicateErrorException (" + anId + ", " + aData + ", " + aMessage + ")");
 	}
 
+	/**
+	 * @param min
+	 * @param max
+	 * @return
+	 */
 	protected int getRandomInteger (int min, int max) {
 		Random random = new Random();
 		int randomNumber = random.nextInt(max + 1 - min) + min;
